@@ -1,10 +1,15 @@
 #include "Quadrobike.h"
+#include "fstream"
+#include "Director.h"
+#include "string"
+#include "iostream"
+
+string path2 = "Quadrobike.txt";
 
 void Quadrobike::createMachine()
 {
 	p = new Machine;
 }
-
 void Quadrobike::addPrice()
 {
 	p->arrayPRICE.push_back(PRICE());

@@ -1,4 +1,10 @@
 #include "Motobike.h"
+#include "Director.h"
+#include "fstream"
+#include "string"
+#include "iostream"
+
+string path1 = "Motobike.txt";
 
 void Motobike::createMachine()
 {

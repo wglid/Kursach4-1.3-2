@@ -1,8 +1,6 @@
 #pragma once
 #include "MachineBuilder.h"
-class Quadrobike :
-	
-public MachineBuilder
+class Quadrobike : public MachineBuilder
 {
 	void createMachine();
 	void addPrice();
@@ -17,5 +15,6 @@ public MachineBuilder
 	void Steering_type();
 	void Oil_lose_type();
 	void Trunk_type();
+	
 };
 
