@@ -11,7 +11,11 @@
 #include "Steering.h"
 #include "Oil_lose.h"
 #include "Trunk.h"
+#include <string>
+#include <iostream>
+#include <fstream>
 
+using namespace std;
 
 class Machine
 {
@@ -30,4 +34,8 @@ public:
 	vector<Trunk> arrayaddTrunk;
 	//Парамерты для любой машины
 	void info();
+	void Save(ofstream& fout);
+	void Load(ifstream& fin);
+	void Edit();
+	void AddUp(ofstream& fout);
 };

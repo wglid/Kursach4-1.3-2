@@ -6,11 +6,14 @@
 
 string path1 = "Motobike.txt";
 
+/*Director dir;
+Motobike ca_builder;
+Machine* ca = dir.createMachine(ca_builder);*/
+
 void Motobike::createMachine()
 {
 	p = new Machine;
 }
-
 void Motobike::addPrice()
 {
 	p->arrayPRICE.push_back(PRICE());
@@ -68,3 +71,4 @@ void Motobike::Oil_lose_type()
 	p->arrayaddOil_lose.push_back(Oil_lose());
 
 }
+

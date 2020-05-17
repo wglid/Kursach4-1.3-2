@@ -17,4 +17,7 @@ public:
 	void Oil_lose_type();
 	void Trunk_type();
 	
+	/*void Save();
+	void Load();
+	void Edit();*/
 };

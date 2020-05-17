@@ -9,4 +9,5 @@ public:
 	void info();
 	string year;
 	Year();
+	Year(string line);
 };

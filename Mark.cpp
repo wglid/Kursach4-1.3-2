@@ -2,7 +2,7 @@
 //Марка
 void Mark::info()
 {
-	cout << "Mark" << endl;
+	cout << "Mark: " << mark << endl;
 }
 
 Mark::Mark()
@@ -10,4 +10,9 @@ Mark::Mark()
 	cout << "Введите марку: ";
 	cin >> mark;
 	cout << "Марка успешно указана!" << endl << endl;
+}
+
+Mark::Mark(string line)
+{
+	mark = line;
 }

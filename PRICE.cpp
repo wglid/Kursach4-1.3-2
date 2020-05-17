@@ -2,7 +2,7 @@
 //Цена
 void PRICE::info()
 {
-	cout << "Price" << endl;
+	cout << "Price: " << price << endl << endl;
 }
 
 PRICE::PRICE()
@@ -12,4 +12,7 @@ PRICE::PRICE()
 	cout << "Новая цена успешно указана!" << endl << endl;
 }
 
-
+PRICE::PRICE(string line)
+{
+	price = line;
+}

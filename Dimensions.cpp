@@ -2,7 +2,7 @@
 //Габариты
 void Dimensions::info()
 {
-	cout << "Dimensions " << dimensions << endl;
+	cout << "Dimensions: " << dimensions << endl;
 }
 
 Dimensions::Dimensions()
@@ -10,4 +10,9 @@ Dimensions::Dimensions()
 	cout << "Введите габариты: ";
 	cin >> dimensions;
 	cout << "Габариты успешно указаны!" << endl << endl;
+}
+
+Dimensions::Dimensions(string line)
+{
+	dimensions = line;
 }

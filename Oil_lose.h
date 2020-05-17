@@ -9,4 +9,5 @@ public:
 	void info();
 	string oil;
 	Oil_lose();
+	Oil_lose(string line);
 };

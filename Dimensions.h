@@ -9,5 +9,6 @@ public:
 	void info();
 	string dimensions;
 	Dimensions();
+	Dimensions(string line);
 };
 

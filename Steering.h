@@ -9,4 +9,5 @@ public:
 	void info();
 	string steering;
 	Steering();
+	Steering(string line);
 };

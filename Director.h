@@ -3,6 +3,7 @@
 
 class Director
 {
+
 public:
 	Machine* createMachine(MachineBuilder& builder)
 	{

@@ -2,7 +2,7 @@
 //Цвета
 void Colors::info()
 {
-	cout << "Colors" << endl;
+	cout << "Colors: " << colors << endl;
 }
 
 Colors::Colors()
@@ -11,3 +11,9 @@ Colors::Colors()
 	cin >> colors;
 	cout << "Новый цвет успешно указан!" << endl << endl;
 }
+
+Colors::Colors(string line)
+{
+	colors = line;
+}
+

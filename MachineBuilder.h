@@ -23,11 +23,7 @@ public:
 	virtual void Oil_lose_type() {}
 	virtual void Trunk_type() {}
 
-	virtual void Save_Car() = 0;
-	virtual void Edit_Car() = 0;
-	virtual void Print(ostream& out) = 0;
-	
-
+	//virtual void Delete() = 0;
 	//Метод для каждого параметра
 	virtual Machine* getMachine() { return p; }
 };

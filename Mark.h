@@ -9,5 +9,6 @@ public:
 	void info();
 	string mark;
 	Mark();
+	Mark(string line);
 };
 

@@ -11,28 +11,115 @@
 #include "Car.h"
 #include "Motobike.h"
 #include "Quadrobike.h"
-#include "fstream"
-#include "string"
-#include "iostream"
+#include <fstream>
+#include <string>
+#include <iostream>
 #include "windows.h"
+
+using namespace std;
 
 int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
+
+	ofstream fout;
+	ifstream fin;
+	int idx = 0;
+	vector <Machine*> Machinera;
+	int button;
+	bool flag = true;
+	int x = 0;
+	int i = 0;
+	Director dir;
+	Car CarBuilder;
+	while(flag)
+	{
+		system("cls");
+		cout << "----------------------------------" << endl
+			<< "               МЕНЮ               " << endl
+			<< "----------------------------------" << endl
+			<< "\t" << "Машины" << endl
+			<< "[1] Добавить машину" << endl
+			<< "[2] Удалить машину" << endl
+			<< "[3] Редактировать машину" << endl
+			<< "[4] Вывести существующие собрки машин на экран" << endl 
+			<< "[5] Загрузка" << endl
+			<< "[6] Сохранение" << endl << endl
+			<< "[0] Выход" << endl;
+		cin >> button;
+		if (cin.fail()) {
+			button = -1;
+			cin.clear();
+			cin.ignore(10000, '\n');
+		}
+		switch (button)
+		{
 		
-	Car Data;
+		case 1:
+			Machinera.push_back(dir.createMachine(CarBuilder));
+			system("pause");
+			break;
+		
+		case 3:
+			/*
+			Вывод типов элемета
+			cin >> x;
+			Machinera[x]->Edit();
+			*/
+		case 4:
+			cout << "----------------------------------" << endl
+				<< "               МАШИНЫ               " << endl
+				<< "----------------------------------" << endl;
+			if (!Machinera.size())
+			{
+				cout << "Элементов нет." << endl;
+			}
+			else
+				for (size_t i = 0; i < Machinera.size(); i++)
+				{
+					Machinera[i]->info();
+				}
+			cout << endl;
+			break;
+		case 5:
+			i = 0;
+			fin.open("Car.txt");
+			while (fin)
+			{
+				Machinera.push_back(new Machine);
+				Machinera[Machinera.size() - 1]->Load(fin);
+			}
+			fin.close();
+			break;
+		case 6:
+			i = 0;
+			fout.open("Car.txt");
+			for (size_t i = 0; i < Machinera.size(); i++)
+			{
+				Machinera[i]->Save(fout);
+			}
+			fout.close();
+			break;
+		case 0:
+			flag = false;
+			break;
+		default:
+			cout << "Введена некорректная команда" << endl << endl;
+			break;
+		}
+		system("pause");
+	}
 
-	Data.Save_Car();
-	Data.Load_Car();
-	//Data.Print(ostream & out);
-	Data.Edit_Car();
-	Data.Save_Car();
-	Data.Load_Car();
-	
-
-
-
-	
 	return 0;
 }
+
+/*Data.Save();
+Data.Load();
+Data.Edit();
+Data.Save();
+//Data.Print(out);
+//Data.Load();
+Data.Delete();
+Data.Load();
+//Data.AddUp();*/

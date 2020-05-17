@@ -9,4 +9,5 @@ public:
 	void info();
 	string colors;
 	Colors();
+	Colors(string line);
 };

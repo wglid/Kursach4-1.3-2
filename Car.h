@@ -18,10 +18,5 @@ public:
 	void Steering_type();
 	void Oil_lose_type();
 	void Trunk_type();
-
-	void Save_Car();
-	void Load_Car();
-	void Edit_Car();
-	//void Print(ostream& out);
-
+	
 };

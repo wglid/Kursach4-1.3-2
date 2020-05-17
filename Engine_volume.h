@@ -9,6 +9,6 @@ public:
 	void info();
 	string engine_volume;
 	Engine_volume();
-
+	Engine_volume(string line);
 
 };

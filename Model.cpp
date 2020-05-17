@@ -2,7 +2,7 @@
 //Модель
 void Model::info()
 {
-	cout << "Model" << endl;
+	cout << "Model: " << model << endl;
 }
 
 Model::Model()
@@ -10,4 +10,9 @@ Model::Model()
 	cout << "Введите модель: ";
 	cin >> model;
 	cout << "Модель успешно указан!" << endl << endl;
+}
+
+Model::Model(string line)
+{
+	model = line;
 }

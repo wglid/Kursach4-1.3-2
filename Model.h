@@ -9,4 +9,5 @@ public:
 	void info();
 	string model;
 	Model();
+	Model(string line);
 };

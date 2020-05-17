@@ -9,4 +9,5 @@ public:
 	void info();
 	string fuel;
 	Fuel();
+	Fuel(string line);
 };

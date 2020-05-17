@@ -9,4 +9,5 @@ public:
 	void info();
 	string engine;
 	Engine();
+	Engine(string line);
 };

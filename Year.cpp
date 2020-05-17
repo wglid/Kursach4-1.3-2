@@ -2,7 +2,7 @@
 //Год выпуска
 void Year::info()
 {
-	cout << "Year" << endl;
+	cout << "Year: " << year << endl;
 }
 
 Year::Year()
@@ -10,4 +10,9 @@ Year::Year()
 	cout << "Введите год выпуска: ";
 	cin >> year;
 	cout << "Тип рулевого управления успешно указан!" << endl << endl;
+}
+
+Year::Year(string line)
+{
+	year = line;
 }

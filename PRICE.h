@@ -9,4 +9,5 @@ public:
 	void info();
 	string price;
 	PRICE();
+	PRICE(string line);
 };

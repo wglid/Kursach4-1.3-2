@@ -2,7 +2,7 @@
 //Двигатель
 void Engine::info()
 {
-	cout << "Engine" << endl;
+	cout << "Engine: " << engine << endl;
 }
 
 Engine::Engine()
@@ -12,3 +12,7 @@ Engine::Engine()
 	cout << "Габариты успешно указаны!" << endl << endl;
 }
 
+Engine::Engine(string line)
+{
+	engine = line;
+}

@@ -2,7 +2,7 @@
 //Рулевое управление
 void Steering::info()
 {
-	cout << "Steering" << endl;
+	cout << "Steering: " << steering << endl;
 }
 
 Steering::Steering()
@@ -10,4 +10,9 @@ Steering::Steering()
 	cout << "Введите тип рулевого управления: ";
 	cin >> steering;
 	cout << "Тип рулевого управления успешно указан!" << endl << endl;
+}
+
+Steering::Steering(string line)
+{
+	steering = line;
 }
